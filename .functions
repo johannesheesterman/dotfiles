@@ -1,4 +1,6 @@
 
-function test() {
-    echo test abc
+function zet() {
+    d=$HOME/zet/$(date +'%Y%m%d%H%M%S')
+    mkdir $d
+    vim $d/README.md
 }
