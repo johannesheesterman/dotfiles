@@ -103,6 +103,7 @@ if ! shopt -oq posix; then
 fi
 
 
+
 export PATH=~/.npm-global/bin:$PATH
 
 source $HOME/dotfiles/.bash_prompt
