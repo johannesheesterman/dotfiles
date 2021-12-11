@@ -1,5 +1,8 @@
 " Config settings
 set relativenumber
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " Install plug.vim if it is not already installed.
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -14,3 +17,20 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
+
+" ==== COC config ====
+let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-tsserver' ]
+
+" ==== COC mappings ====
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
