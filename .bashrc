@@ -102,7 +102,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
+force_color_prompt=yes
 
 export PATH=~/.npm-global/bin:$PATH
 
