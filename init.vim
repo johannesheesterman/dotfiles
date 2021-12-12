@@ -3,6 +3,11 @@ set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set hidden
+set nobackup
+set nowritebackup
+set cmdheight=2
+set updatetime=300
 
 " Install plug.vim if it is not already installed.
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -46,3 +51,4 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Refactoring
+nmap <leader>rn <Plug>(coc-rename)
