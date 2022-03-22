@@ -35,7 +35,7 @@ colorscheme gruvbox
 set background=dark
 
 " ==== COC config ====
-let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-tsserver' ]
+let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-tsserver', 'coc-rls' ]
 
 " ==== COC mappings ====
 

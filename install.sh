@@ -11,6 +11,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install -y nodejs
 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 export TERMINAL=gnome-terminal
 git clone https://github.com/Mayccoll/Gogh.git gogh
 ./gogh/themes/gruvbox-dark.sh
@@ -20,3 +22,6 @@ ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 source $HOME/dotfiles/.bashrc
+
+
+
