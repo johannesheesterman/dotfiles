@@ -4,3 +4,7 @@ function zet() {
     mkdir $d
     vim $d/README.md
 }
+
+function format-dotnet(){
+	dotnet-format --files $(git show --name-only --pretty="" | tr '\n' ',')
+}

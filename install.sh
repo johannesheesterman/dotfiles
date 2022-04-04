@@ -3,7 +3,11 @@ if [ ! -f "$HOME/.bashrc" ]; then
   ln -s $HOME/dotfiles/.bashrc $HOME/.bashrc
 fi;
 
-sudo apt install -y vim curl
+sudo add-apt-repository ppa:neovim-ppa/unstable
+
+sudo apt update
+
+sudo apt install -y vim curl neovim
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

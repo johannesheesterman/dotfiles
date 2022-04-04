@@ -21,6 +21,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'gruvbox-community/gruvbox'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -35,7 +38,7 @@ colorscheme gruvbox
 set background=dark
 
 " ==== COC config ====
-let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-tsserver', 'coc-rls' ]
+let g:coc_global_extensions=[ 'coc-tsserver', 'coc-rls' ]
 
 " ==== COC mappings ====
 
@@ -52,3 +55,13 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Refactoring
 nmap <leader>rn <Plug>(coc-rename)
+
+
+" ==== Telescope config ====
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" ==== NerdTree config ====
+nnoremap <leader>t <cmd>NERDTree<cr>

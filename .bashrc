@@ -105,6 +105,8 @@ fi
 force_color_prompt=yes
 
 export PATH=~/.npm-global/bin:$PATH
+export PATH=$PATH:$HOME/dotfiles/scripts
 
 source $HOME/dotfiles/.bash_prompt
 source $HOME/dotfiles/.functions
+source $HOME/dotfiles/.env
