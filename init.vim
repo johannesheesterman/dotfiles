@@ -8,6 +8,7 @@ set nobackup
 set nowritebackup
 set cmdheight=2
 set updatetime=300
+set clipboard+=unnamed
 
 " Install plug.vim if it is not already installed.
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -20,6 +21,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
