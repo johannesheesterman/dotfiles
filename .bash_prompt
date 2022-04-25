@@ -50,10 +50,10 @@ else
 fi;
 
 # Set the terminal title and prompt.
-PS1="\[${white}╭─ ${userStyle}\]🖥️  \u"; # username
+PS1="\[${white}⎲ ${userStyle}\]\u"; # username
 PS1+="\[${blue} 📁 \w\]"; # working directory full path
 PS1+="\$(prompt_git \"\[${white}\] on \[${green}ᛘ\] \[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
-PS1+="\n\[${white}\]╰─λ   \[${reset}\]";
+PS1+="\n\[${white}\]⎳ λ\[${reset}\] ";
 export PS1;
 echo $PS1 > ~/ps1
 
