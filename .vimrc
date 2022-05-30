@@ -25,8 +25,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/nerdtree'
-Plug 'OmniSharp/omnisharp-vim'
-Plug 'dense-analysis/ale'
+Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 
@@ -50,5 +49,3 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>t <cmd>NERDTree<cr>
 
 
-" ==== Load other config ====
-source ~/dotfiles/omnisharp.vim 
