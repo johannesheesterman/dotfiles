@@ -21,13 +21,25 @@ endif
 " Setup plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/nerdtree'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nickspoons/vim-sharpenup'
+Plug 'dense-analysis/ale'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'maximbaz/lightline-ale'
+Plug 'ap/vim-buftabline'
+Plug 'github/copilot.vim'
 
 call plug#end()
+
 
 " ==== Theming ====
 let g:gruvbox_contrast_dark = 'hard'
@@ -48,4 +60,5 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " ==== NerdTree config ====
 nnoremap <leader>t <cmd>NERDTree<cr>
 
-
+" ==== Load other config ====
+source ~/dotfiles/omnisharp.vim 
