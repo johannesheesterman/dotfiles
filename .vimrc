@@ -37,6 +37,14 @@ Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'ap/vim-buftabline'
 Plug 'github/copilot.vim'
+Plug 'fatih/vim-go'
+
+" Debugging
+Plug 'mfussenegger/nvim-dap'
+Plug 'leoluz/nvim-dap-go'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'theHamsta/nvim-dap-virtual-text'
+Plug 'nvim-telescope/telescope-dap.nvim'
 
 call plug#end()
 
@@ -59,6 +67,14 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " ==== NerdTree config ====
 nnoremap <leader>t <cmd>NERDTree<cr>
+
+" ==== Debugging config ====
+nnoremap <F5> <cmd>:lua require'dap'.continue()<CR>
+nnoremap <F10> <cmd>:lua require'dap'.step_over()<CR>
+nnoremap <F11> <cmd>:lua require'dap'.step_into()<cr>
+nnoremap <F12> <cmd>:lua require'dap'.step_out()<CR>
+nnoremap <leader>b <cmd>:lua require'dap'.toggle_breakpoint()<CR>
+nnoremap <leader>d <cmd>:lua require'dapui'.toggle()<CR>
 
 " ==== Load other config ====
 source ~/dotfiles/omnisharp.vim 
