@@ -70,9 +70,9 @@ nnoremap <leader>t <cmd>NERDTree<cr>
 
 " ==== Debugging config ====
 nnoremap <F5> <cmd>:lua require'dap'.continue()<CR>
-nnoremap <F10> <cmd>:lua require'dap'.step_over()<CR>
-nnoremap <F11> <cmd>:lua require'dap'.step_into()<cr>
-nnoremap <F12> <cmd>:lua require'dap'.step_out()<CR>
+nnoremap <F1> <cmd>:lua require'dap'.step_over()<CR>
+nnoremap <F2> <cmd>:lua require'dap'.step_into()<cr>
+nnoremap <F3> <cmd>:lua require'dap'.step_out()<CR>
 nnoremap <leader>b <cmd>:lua require'dap'.toggle_breakpoint()<CR>
 nnoremap <leader>d <cmd>:lua require'dapui'.toggle()<CR>
 
