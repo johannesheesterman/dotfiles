@@ -1,11 +1,10 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath=&runtimepath
+vim.cmd("set runtimepath^=~/.vim runtimepath+=~/.vim/after")
+vim.cmd("let &packpath=&runtimepath")
 
-source ~/dotfiles/.vimrc
-source ~/dotfiles/ls.vim
+vim.cmd("source ~/dotfiles/.vimrc")
+vim.cmd("source ~/dotfiles/ls.vim")
 
 
-lua << EOF
 require('dap-go').setup()
 require('dapui').setup()
 
@@ -19,4 +18,3 @@ end
 dap.listeners.before.event_exited['dapui_config'] = function()
     dapui.close()
 end
-EOF

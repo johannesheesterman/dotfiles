@@ -22,7 +22,7 @@ git clone https://github.com/Mayccoll/Gogh.git gogh
 ./gogh/themes/gruvbox-dark.sh
 
 mkdir -p ~/.config/nvim
-ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
+ln -s ~/dotfiles/init.lua ~/.config/nvim/init.lua
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 source $HOME/dotfiles/.bashrc
