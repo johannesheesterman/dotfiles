@@ -25,6 +25,11 @@ mkdir -p ~/.config/nvim
 ln -s ~/dotfiles/init.lua ~/.config/nvim/init.lua
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
+
+wget https://github.com/OmniSharp/omnisharp-roslyn/releases/latest/download/omnisharp-linux-x64-net6.0.tar.gz
+mkdir omnisharp-roslyn && tar -xf omnisharp-linux-x64-net6.0.tar.gz -C omnisharp-roslyn
+rm omnisharp-linux-x64-net6.0.tar.gz
+
 source $HOME/dotfiles/.bashrc
 
 
