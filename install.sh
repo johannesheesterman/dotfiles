@@ -8,8 +8,9 @@ sudo apt install -y curl git neovim zsh
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/dotfiles/.zshenv $HOME/.zshenv
+ln -s $HOME/dotfiles/nvim/init.lua $HOME/.config/nvim/init.lua
 
-# check if oh-my-zsh is installed
+
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi;
@@ -20,3 +21,6 @@ fi;
 if [ ! -d "$HOME/dotfiles/deps/zsh-autocomplete" ]; then
   git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git deps/zsh-autocomplete
 fi;
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
