@@ -1,36 +1,22 @@
-
 if [ ! -f "$HOME/.bashrc" ]; then
   ln -s $HOME/dotfiles/.bashrc $HOME/.bashrc
 fi;
 
-sudo add-apt-repository ppa:neovim-ppa/unstable
-
 sudo apt update
+sudo apt install -y curl git neovim zsh
 
-sudo apt install -y vim curl neovim
+ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
+ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -s $HOME/dotfiles/.zshenv $HOME/.zshenv
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# check if oh-my-zsh is installed
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi;
 
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt install -y nodejs
-
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-export TERMINAL=gnome-terminal
-git clone https://github.com/Mayccoll/Gogh.git gogh
-./gogh/themes/gruvbox-dark.sh
-
-mkdir -p ~/.config/nvim
-ln -s ~/dotfiles/init.lua ~/.config/nvim/init.lua
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-
-
-wget https://github.com/OmniSharp/omnisharp-roslyn/releases/latest/download/omnisharp-linux-x64-net6.0.tar.gz
-mkdir omnisharp-roslyn && tar -xf omnisharp-linux-x64-net6.0.tar.gz -C omnisharp-roslyn
-rm omnisharp-linux-x64-net6.0.tar.gz
-
-source $HOME/dotfiles/.bashrc
-
-
-
+if [ ! -d "$HOME/dotfiles/deps" ]; then
+  mkdir $HOME/dotfiles/deps
+fi;
+if [ ! -d "$HOME/dotfiles/deps/zsh-autocomplete" ]; then
+  git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git deps/zsh-autocomplete
+fi;
